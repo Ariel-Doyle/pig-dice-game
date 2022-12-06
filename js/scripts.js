@@ -18,7 +18,7 @@ GameState.prototype.switchPlayers = function() {
 
 GameState.prototype.rollDice = function() {
   this.diceResult = diceRoll();
-  if (diceRoll === 1) {
+  if (this.diceResult <= 1) {
     this.switchPlayers();
   } else {
     this.turnScore += this.diceResult;
@@ -32,3 +32,6 @@ GameState.prototype.hold = function() {
   this.score[this.player] += this.turnScore;
   this.switchPlayers();
 }
+
+//UI Logic
+
