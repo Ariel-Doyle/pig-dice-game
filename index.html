@@ -19,11 +19,35 @@
 			<button type="button" class="how-to">Game Rules</button>
 		</div>
 		<div class="how-to-play">
-			<p>
-				Player 1 starts first. Each player takes turns rolling a single dice as many times as they wish, adding all roll results to a running total. However if the player rolls a 1, they lose their gained score. Press the hold button to stop rolling and to add your total to your score. First player to 100 points wins!
-			</p>
-			<button class=""
+			<ul>
+				<li>First player to 100 wins!</li>
+				<li>Players take turns rolling the die.</li>
+				<li>Turn ends when player rolls a 1 or chooses to hold.</li>
+				<li>If a player rolls a 1, they lose all the points earned during that turn.</li>
+				<li>If player holds, points earned during the turn are added to their total.</li>
+			</ul>
+			<button type="button" class="close-how">Return to game</button>
 		</div>
+		<div class="game-window">
+			<label id="player1">Player 1</label>
+			<input type="text" id="player-1">
+			<label class="score1">Score</label>
+			<input type="text" id="score-1">
+			<br>
+			<label id="player2">Player 2</label>
+			<input type="text" id="player-2">
+			<label class="score2">Score</label>
+			<input type="text" id="score-2">
+			<br>
+			<input type="button" id="new_game" value="New Game"><br>
+
+			<p><span id="current"></span>'s turn.</p>
+			<input type="button" id="roll" value="Roll">
+			<input type="button" id="hold" value="Hold">
+
+			<label id="total">Total</label>
+		</div>
+
 
 
 
