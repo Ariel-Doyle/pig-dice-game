@@ -1,6 +1,7 @@
 function diceRoll() {
   return Math.floor((Math.random() * 6) + 1);
 }
+
 //Business Logic
 
 function GameState() {
@@ -35,3 +36,41 @@ GameState.prototype.hold = function() {
 
 //UI Logic
 
+let gameState = new GameState();
+
+function handleRoll(event) {
+  event.preventDefault();
+  gameState.rollDice();
+  console.log(gameState.diceResult)
+};
+
+function handleHold() {
+  gameState.hold();
+  let scoreTotal = gameState.score;
+  console.log(scoreTotal);
+  console.log("this player" + this.player)
+  if (this.player === 0){
+    document.getElementById("player1Score").innerText= scoreTotal;
+  } else if (this.player === 1){
+    document.getElementById("player2Score").innerText= scoreTotal;
+  }
+};
+
+window.addEventListener("load", function() {
+  const newGameBtn = document.getElementsByClassName("new-game");
+  const gameRulesBtn = document.getElementsByClassName("how-to");
+  const closeBtn = document.getElementsByClassName("close-how");
+  const rollBtn = document.getElementById("roll");
+  const holdBtn = document.getElementById("hold");
+
+  rollBtn.addEventListener("click", handleRoll);
+
+  holdBtn.addEventListener("click", handleHold);
+});  
+
+// let currentScore = gameState.rollDice();
+//   if (currentScore) {
+//     document.querySelector("div#game-window").append(currentScore);
+//   } else {
+//     document.querySelector("div#game-window").innerText= null;
+//   }
