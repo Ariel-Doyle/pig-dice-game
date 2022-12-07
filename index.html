@@ -14,27 +14,23 @@
 		</div>
 		<button type="button" class="new-game">New Game!</button>
 		<div class="how-to-play">
-		<ul>
-			<li>First player to 100 wins!</li>
-			<li>Players take turns rolling the die.</li>
-			<li>Turn ends when player rolls a 1 or chooses to hold.</li>
-			<li>If a player rolls a 1, they lose all the points earned during that turn.</li>
-			<li>If player holds, points earned during the turn are added to their total.</li>
-		</ul>
-		</div>
+			<p>
+				First player to 100 wins! Players take turns rolling the die. The turn ends when player rolls a 1 or chooses to hold. If a player rolls a 1, they lose all the points earned during that turn. If player holds, points earned during the turn are added to their total.
+			</p>
+	  </div>
 		<div class="game-window">
 			<div class="player-1" id="player1">
 			<h1>Player 1</h1>
-				<h3>Roll Score:</h3>
-				<h3>Total Score:</h3>
+				<h3>Roll Score: <span id="player1Roll"></span></h3>
+				<h3>Total Score: <span id="player1Score"></span></h3>
 			</div>
 			<div class="player-2" id="player2">
 			<h1>Player 2</h1>
-				<h3>Roll Score:</h3>
-				<h3>Total Score:</h3>
+				<h3>Roll Score: <span id="player2Roll"></span></h3>
+				<h3>Total Score: <span id="player2Score"></span></h3>
 			<div>
 			<button type="button" class="roll-btn" id="roll" value="Roll">Roll Dice</button>
-			<button type="button" class="hold-btn" id="hold" value="Hold">Hold / Pass</button>
+			<button type="button" class="hold-btn" id="hold" value="Hold">Hold / Pass</button>		
 		</div>			
 	</div>
 </body>
